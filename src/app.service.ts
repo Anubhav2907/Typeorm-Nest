@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { UserEntity } from './db/entities/user.entity';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHello(): { name: string } {
+    // UserEntity.findOne();
+    return { name: 'Hello World!' };
   }
 }
